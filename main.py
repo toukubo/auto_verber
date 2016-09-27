@@ -1,28 +1,25 @@
-import json
+#!/usr/bin/env python
 
-import logic
-import NounReversal
+import json
+import os
 import sys
 
+from reversal import reversal
 
 
-
-def reversal(hay,nouns):
-    reversedString = hay
-    for noun in nouns:
-        nounReversal = NounReversal.NounReversal(noun,reversedString)
-        reversedString = nounReversal.reversedString
-    return reversedString
-
-
+def getVerbbase():
+    for k, v in os.environ.items():
+        # print k;
+        if k == "VERBBASE":
+            return v
+    return None
 
 def main():
-    print("main")
+
+    # print("main")
     argvs = sys.argv
-    argc = len(argvs)
-    if (argc != 3):
-        print 'Usage: # python %s target_file_path noun_file_path' % argvs[0]
-        quit()
+    argv_length = len(argvs)
+
 
     file = open(argvs[1])
 
@@ -30,10 +27,14 @@ def main():
     nounFile = open(argvs[2])
     # @todo convention
 
+    verbbase = getVerbbase()
+
     nouns = json.load(nounFile)
 
+    reversedString = reversal(hay, nouns)
 
-    reversedString = reversal(hay,nouns)
     print reversedString
+    # to_verbname
 
 main()
+

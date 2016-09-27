@@ -1,4 +1,4 @@
 [
-  {"name":"Noun","attrs":[{"name":"required","classtype":"String"}]},
+  {"name":"Noun","attrs":[{"name":"name","classtype":"String"}]},
   {"name":"Attr","attrs":[{"name":"name","classtype":"String"},{"name":"classtype","classtype":"String"}]}
 ]
