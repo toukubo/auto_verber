@@ -1,0 +1,22 @@
+{
+  "name": "auto_verber",
+  "version": "1.0.0",
+  "description": "Usage: python verber.py target_file_path noun_file_path",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toukubo/auto_verber.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toukubo/auto_verber/issues"
+  },
+  "homepage": "https://github.com/toukubo/auto_verber#readme",
+  "dependencies": {
+    "storyteller_config": "file:../storyteller_config"
+  }
+}
